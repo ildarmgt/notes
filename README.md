@@ -18,7 +18,7 @@
 
   * Changing how to launch chrome:
     * Linux/Ubutu: `google-chrome http://localhost:4567/ --incognito`
-    * OSX `open -a /Applications/Google Chrome.app --args --incognito` (not verified)
+    * OSX `open -a /Applications/Google Chrome.app 'http://localhost:4567/' --args --incognito` (not verified)
     * remove --incognito to launch in default browser session
     * could use directly in terminal, but need to replace $filename with ruby controller file necessary like app.rb
 
