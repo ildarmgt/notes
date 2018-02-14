@@ -1,8 +1,8 @@
-# Important notes
+# Important notes #
 
-## vscode
+## vscode ##
 
-### How to run run Sinatra/Ruby server conviniently from vscode
+### How to run Sinatra/Ruby server & open it in chrome instantly from vscode ###
 
 **Result**: to test a build, only have to right click controller (e.g. app.rb), click `run code`, should open localhost in browser ~ 1 second later with server up. (Play button on rb file also works.) Ctrl-C to get out
 
