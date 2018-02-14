@@ -35,19 +35,19 @@
 
 **Done**
 
-what plug-in does
+what plug-in does:
 
-  * now can right click app.rb and hit `run code` or use play button with app.rb open; when done, ctrl-c in terminal
+  * with those settings, sends the long terminal command to internal terminal
 
 what terminal command does:
 
-1. run ruby file
-2. wait 1 second
-3. opens localhost:4567 in chrome (hide browser return outputs in terminal)
-4. print 10 blank lines (so easier to see where server starts)
-5. write `server up`
-6. make sure server outputs are visible / at front
-7. if ruby process returns error, say `ruby fail` (shouldn't say it if terminated by Ctrl-C)
-8. when ruby process terminated, say `server down`
-9. show all running processes in that terminal to make sure no left over ruby server processes
+  1. run selected ruby file
+  2. wait 1 second
+  3. opens localhost:4567 in chrome (hide browser return outputs in terminal)
+  4. print 10 blank lines (so easier to see where server starts)
+  5. write `server up`
+  6. make sure server outputs are visible / at front
+  7. if ruby process returns error, say `ruby fail` (shouldn't say it if terminated by Ctrl-C)
+  8. when ruby process terminated, say `server down`
+  9. show all running processes in that terminal to make sure no left over ruby server processes
 
