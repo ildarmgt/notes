@@ -2,7 +2,7 @@
 
 ## vscode
 
-How to run run Sinatra/Ruby server from vscode with play button
+### How to run run Sinatra/Ruby server conviniently from vscode with a play button
 
 * Get `Code Runner` extension
 * Open settings: File > Preferences > settings or Ctrl + ,
