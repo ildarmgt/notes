@@ -2,10 +2,12 @@
 
 ## vscode
 
-### How to run run Sinatra/Ruby server conviniently from vscode with a play button
+### How to run run Sinatra/Ruby server conviniently from vscode
+
+**Result**: to test a build, only have to right click controller (e.g. app.rb), click `run code`, should open localhost in browser ~ 1 second later with server up. (Play button on rb file also works.) Ctrl-C to get out
 
 * Get `Code Runner` extension
-* Open settings: File > Preferences > settings or Ctrl + ,
+* Open vscode settings: File > Preferences > settings or Ctrl + ,
 * search for `code-runner.executorMap` setting
 * hit pen icon to left of it to add it to custom settings
 * change the key "ruby": to value (one-line):
@@ -14,13 +16,13 @@
   ruby $fileName || (echo;echo 'panic: ruby fail city';echo) & (sleep 1 && google-chrome http://localhost:4567/ --incognito)&>/dev/null; (for i in `seq 1 10`;do echo;done); echo 'server up or fails here'; echo; fg&>/dev/null; echo;echo;echo 'server down'; echo; ps; echo 'make sure no ruby running ^ (fg and Ctrl-C otherwise)'; echo;
 ``
 
-  * Changing how to launch chrome
+  * Changing how to launch chrome:
     * Linux/Ubutu: `google-chrome http://localhost:4567/ --incognito`
     * OSX `open -a /Applications/Google Chrome.app --args --incognito` (not verified)
     * remove --incognito to launch in default browser session
     * could use directly in terminal, but need to replace $filename with ruby controller file necessary like app.rb
 
-* other vscode core-runner settings:
+* Other vscode core-runner settings:
 ```
   "code-runner.runInTerminal": true,
   "code-runner.saveFileBeforeRun": true,
@@ -31,6 +33,7 @@
   "code-runner.preserveFocus": false,
 ```
 
+**Done**
 
 what plug-in does
 
