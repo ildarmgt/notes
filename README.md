@@ -32,6 +32,7 @@ it does:
 4. print 10 blank lines (so easier to see where server starts)
 5. write `server up`
 6. make sure server outputs are visible / at front
-7. when terminated (e.g with Ctrl + C) say `server down`
-8. show all running processes in that terminal to make sure no left over ruby server processes
+7. if ruby process returns error, say `ruby fail` (shouldn't say it if terminated by Ctrl-C)
+8. when ruby process terminated, say `server down`
+9. show all running processes in that terminal to make sure no left over ruby server processes
 
