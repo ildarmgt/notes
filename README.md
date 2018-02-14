@@ -15,10 +15,10 @@ How to run run Sinatra/Ruby server from vscode with play button
 ``
 
   * Changing how to launch chrome
-   * Linux/Ubutu: `google-chrome http://localhost:4567/ --incognito`
-   * OSX `open -a /Applications/Google Chrome.app --args --incognito` (not verified)
-   * remove --incognito to launch in default browser session
-   * could use directly in terminal, but need to replace $filename with ruby controller file necessary like app.rb
+    * Linux/Ubutu: `google-chrome http://localhost:4567/ --incognito`
+    * OSX `open -a /Applications/Google Chrome.app --args --incognito` (not verified)
+    * remove --incognito to launch in default browser session
+    * could use directly in terminal, but need to replace $filename with ruby controller file necessary like app.rb
 
 * other vscode core-runner settings:
 ```
