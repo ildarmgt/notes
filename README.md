@@ -10,7 +10,7 @@ How to run run Sinatra/Ruby server from vscode with play button
 * hit pen icon to left of it to add it to custom settings
 * change the key "ruby": to value (one-line):
 
-``ruby $fileName || (echo 'ruby panic fail city'; exit 0) & (sleep 1 && google-chrome http://localhost:4567/)&>/dev/null; (for i in `seq 1 10`;do echo;done); echo 'server up'; fg&>/dev/null; ps; echo 'make sure no ruby process ^ - server rekt'``
+``ruby $fileName & sleep 1 && google-chrome http://localhost:4567/ &>/dev/null; (for i in `seq 1 10`;do echo;done); echo 'server up (or fails here)'; echo; fg&>/dev/null && (echo; echo 'server down') || (echo 'panic: ruby fail city'); echo; ps; echo 'make sure no ruby running ^'; echo;``
 
 * other settings:
 ```
@@ -27,11 +27,11 @@ How to run run Sinatra/Ruby server from vscode with play button
 it does:
 
 1. run ruby file
-2. if fails, write something
-3. otherwise wait 1 sec
-4. open localhost:4567 in browser (hide errors)
-5. print 10 blank lines
-6. write `server up`
-7. make sure server outputs are visible
-8. when terminated with Ctrl + C, show all running processes in that terminal
+2. wait 1 second
+3. opens localhost:4567 in chrome (hide browser return outputs in terminal)
+4. print 10 blank lines (so easier to see where server starts)
+5. write `server up`
+6. make sure server outputs are visible / at front
+7. when terminated (e.g with Ctrl + C) say `server down`
+8. show all running processes in that terminal to make sure no left over ruby server processes
 
