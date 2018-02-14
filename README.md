@@ -10,21 +10,33 @@ How to run run Sinatra/Ruby server from vscode with play button
 * hit pen icon to left of it to add it to custom settings
 * change the key "ruby": to value (one-line):
 
-``ruby $fileName || (echo;echo 'panic: ruby fail city';echo) & (sleep 1 && google-chrome http://localhost:4567/)&>/dev/null; (for i in `seq 1 10`;do echo;done); echo 'server up or fails here'; echo; fg&>/dev/null; echo;echo;echo 'server down'; echo; ps; echo 'make sure no ruby running ^ (fg and Ctrl-C otherwise)'; echo;``
+``
+  ruby $fileName || (echo;echo 'panic: ruby fail city';echo) & (sleep 1 && google-chrome http://localhost:4567/ --incognito)&>/dev/null; (for i in `seq 1 10`;do echo;done); echo 'server up or fails here'; echo; fg&>/dev/null; echo;echo;echo 'server down'; echo; ps; echo 'make sure no ruby running ^ (fg and Ctrl-C otherwise)'; echo;
+``
 
-* other settings:
-```
-"code-runner.runInTerminal": true,
-"code-runner.saveFileBeforeRun": true,
-"code-runner.saveAllFilesBeforeRun": true,
-"code-runner.fileDirectoryAsCwd": true,
-"code-runner.ignoreSelection": true,
-"code-runner.showRunIconInEditorTitleMenu": true,
-"code-runner.preserveFocus": false,
-```
-* now can right click app.rb and hit `run code` or use play button with app.rb open; when done, ctrl-c in terminal
+  * Changing how to launch chrome
+   * Linux/Ubutu: `google-chrome http://localhost:4567/ --incognito`
+   * OSX `open -a /Applications/Google Chrome.app --args --incognito` (not verified)
+   * remove --incognito to launch in default browser session
+   * could use directly in terminal, but need to replace $filename with ruby controller file necessary like app.rb
 
-it does:
+* other vscode core-runner settings:
+```
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.fileDirectoryAsCwd": true,
+  "code-runner.ignoreSelection": true,
+  "code-runner.showRunIconInEditorTitleMenu": true,
+  "code-runner.preserveFocus": false,
+```
+
+
+what plug-in does
+
+  * now can right click app.rb and hit `run code` or use play button with app.rb open; when done, ctrl-c in terminal
+
+what terminal command does:
 
 1. run ruby file
 2. wait 1 second
