@@ -29,7 +29,7 @@ it does:
 1. run ruby file
 2. if fails, write something
 3. otherwise wait 1 sec
-4. open it in browser (hide errors)
+4. open localhost:4567 in browser (hide errors)
 5. print 10 blank lines
 6. write `server up`
 7. make sure server outputs are visible
