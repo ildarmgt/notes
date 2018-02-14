@@ -49,5 +49,6 @@ what terminal command does:
   6. make sure server outputs are visible / at front
   7. if ruby process returns error, say `ruby fail` (shouldn't say it if terminated by Ctrl-C)
   8. when ruby process terminated, say `server down`
-  9. show all running processes in that terminal to make sure no left over ruby server processes
+  9. show all running processes in that terminal to make sure no left over ruby server processes 
+     * (common issue is background server still running when starting another one so convinient to see at the end)
 
