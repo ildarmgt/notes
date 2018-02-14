@@ -20,7 +20,6 @@ How to run run Sinatra/Ruby server from vscode with play button
 "code-runner.fileDirectoryAsCwd": true,
 "code-runner.ignoreSelection": true,
 "code-runner.showRunIconInEditorTitleMenu": true,
-"code-runner.customCommand": "",
 "code-runner.preserveFocus": false,
 ```
 * now can right click app.rb or w/e, hit `run code`, when done, ctrl-c in terminal
